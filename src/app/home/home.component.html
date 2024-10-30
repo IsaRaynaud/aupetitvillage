@@ -1,0 +1,27 @@
+<div class="container-fluid mb-5">
+    <div class="bg-cover"></div>
+    <p class="text-center mt-3">Bienvenue</p>
+    <h1 class="text-center">Au Petit Village</h1>
+</div>
+<div class="container p-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="../../assets/images/figurine-guerrier-gaulois.webp" alt="Figurine de guerrier gaulois" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+                <p>Un village peuplé d'irréductibles Figurinistes résiste encore et toujours à l'envahisseur ! Oui, c'est un peu ce qui nous a motivés à lancer <strong>Au Petit Village</strong>.</p>
+                <p>Le projet est né de la passion pour l'univers d'Astérix et Obélix ! Fondée récemment par une équipe de créateurs enthousiastes, notre entreprise se consacre à la vente de figurines faites main, capturant l'esprit espiègle et l'humour intemporel de ces héros gaulois. Chaque figurine est soigneusement conçue avec des matériaux de qualité, pour que chaque pièce soit unique et pleine de caractère.</p>
+            </div>
+            <div class="col-lg-3">
+                <img src="../../assets/images/figurine-soldat-romain.webp" alt="Figurine de soldat romain" class="img-fluid">
+            </div>
+        </div>
+</div>
+<div class="container-fluid bg-custom p-3">
+    <h2>Tous nos produits</h2>
+    <div class="row">
+    <div *ngFor="let product of products" class="col-lg-4">
+        <app-product [product]="product"></app-product>
+    </div>
+    </div>
+</div>

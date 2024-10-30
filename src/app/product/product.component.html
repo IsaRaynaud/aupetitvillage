@@ -1,0 +1,29 @@
+<!-- Card -->
+ <div class="container d-flex flex-column">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <h3>{{ product.title }}</h3>
+    <p>{{ product.price }} €</p>
+    <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">Acheter</button>
+ </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{ product.title }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                    <img [src]="product.image" alt="{{ product.name }}" />
+                    <p class="text-center p-3">{{ product.price }} €</p>
+                    <p>{{ product.description }}</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-custom">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+</div>
