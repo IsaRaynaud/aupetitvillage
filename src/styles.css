@@ -5,20 +5,36 @@
     font-style: normal;
   }
 
-  @font-face {
+@font-face {
     font-family: 'Bubbleboddy Neue';
     src: url('./assets/fonts/bubbleboddyneue.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   
-  h1, h2, h3 {
+body {
+    font-family: 'Comfortaa', sans-serif;
+    color: #151217;
+    font-size: 1.1rem;
+  }
+
+h1, h2, h3 {
     font-family: 'Bubbleboddy Neue', sans-serif;
     color: #DA001E;
   }
-  
-    
- body {
-    font-family: 'Comfortaa', sans-serif;
-    color: #151217;
+
+h1 {
+    font-size: 4rem;
   }
+
+h2 {
+    font-size: 2.5rem;
+  }
+
+h3 {
+  font-size: 1.5rem;
+}
+
+nav {
+  font-size: 1.8rem;
+}
