@@ -30,6 +30,6 @@ export class ProductsServiceService {
       description: 'Texte de présentation complète du produit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique ante vel sem malesuada, eget varius erat efficitur. Vestibulum nec tempus arcu. Nullam rhoncus feugiat risus eu interdum. Integer dictum vehicula dolor, nec consectetur lorem lobortis at. Aliquam cursus volutpat ipsum sit amet ultrices. Donec metus ex, lacinia quis sem in, elementum eleifend turpis. '
     },
   ];
-}
+
   constructor() { }
 }

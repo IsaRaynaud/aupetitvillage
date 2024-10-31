@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
 
 @Component({
@@ -7,5 +7,11 @@ import { ProductsServiceService } from '../products-service.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  products: any[] = [];
 
+  constructor(private ProductsServiceService: ProductsServiceService) { }
+  
+  ngOnInit(): void {
+    this.products = this.ProductsServiceService.products
+  }
 }
