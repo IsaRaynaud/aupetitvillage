@@ -9,7 +9,6 @@ import { ProductsServiceService } from '../products-service.service';
 
 export class ProductComponent implements OnInit {
   products: any[] = [];
-  selectedProduct: any
 
   constructor(private ProductsServiceService: ProductsServiceService) { }
   
@@ -17,7 +16,9 @@ export class ProductComponent implements OnInit {
   this.products = this.ProductsServiceService.products
   }
 
-  selctProduct(product:any) {
+  selectedProduct: any;
+
+  selectProduct(product:any) : void {
   this.selectedProduct = product;
   }
 }
