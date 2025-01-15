@@ -18,9 +18,19 @@
         </div>
 </div>
 <div class="container-fluid bg-custom p-3">
-    <h2>Tous nos produits</h2>
+    <div class="row justify-content-between">
+        <div class="col-9">
+            <h2>Tous nos produits</h2>
+        </div>
+        <div class="col-3">
+            <div class="btn-group p-2 align-self-end" role="group" aria-label="Bouton trier par">
+                <button class="btn btn-sort" (click)="sortBy('title')">Trier par nom</button>
+                <button class="btn btn-sort"  (click)="sortBy('price')">Trier par prix</button>
+            </div>
+        </div>
+    </div>
     <div class="row">
-        <div *ngFor="let product of products" class="col-lg-4">
+        <div *ngFor="let product of products | sort: sortKey : sortOrder" class="col-lg-4">
             <app-product></app-product>
         </div>
     </div>

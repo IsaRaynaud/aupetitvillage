@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
-import { SortByNamePipe } from './sort-by-name.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { SortByNamePipe } from './sort-by-name.pipe';
     AboutComponent,
     ProductComponent,
     ContactComponent,
-    SortByNamePipe
+    SortPipe
   ],
   imports: [
     BrowserModule,
