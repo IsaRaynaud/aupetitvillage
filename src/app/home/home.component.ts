@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
+import { ProductComponent } from '../product/product.component';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,8 @@ import { ProductsServiceService } from '../products-service.service';
 })
 export class HomeComponent {
   products: any[] = [];
-
+  filteredProducts: any[] = [];
+  searchQuery: string = '';
   sortKey: string = 'title'; // Default sort key
   sortOrder: 'asc' | 'desc' = 'asc'; // Default sort order
 
@@ -27,6 +29,13 @@ export class HomeComponent {
   
   ngOnInit(): void {
     this.products = this.ProductsServiceService.products
+  }
+
+  onSearch(event: any): void {
+    const query = event.target.value.toLowerCase();
+    this.filteredProducts = this.products.filter(product =>
+      product.title.toLowerCase().includes(query)
+    );
   }
 
 }

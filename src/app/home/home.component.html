@@ -19,19 +19,19 @@
 </div>
 <div class="container-fluid bg-custom p-3">
     <div class="row justify-content-between">
-        <div class="col-9">
+        <div class="col-lg-8">
             <h2>Tous nos produits</h2>
         </div>
-        <div class="col-3">
-            <div class="btn-group p-2 align-self-end" role="group" aria-label="Bouton trier par">
-                <button class="btn btn-sort" (click)="sortBy('title')">Trier par nom</button>
-                <button class="btn btn-sort"  (click)="sortBy('price')">Trier par prix</button>
-            </div>
+        <div class="col-lg-2">
+            <button class="btn btn-sort" aria-label="Bouton trier par" (click)="sortBy('price')">Trier par prix</button>
+        </div>
+        <div class="col-lg-2">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Recherche" class="form-control border-custom" />
         </div>
     </div>
     <div class="row">
-        <div *ngFor="let product of products | sort: sortKey : sortOrder" class="col-lg-4">
-            <app-product></app-product>
+        <div *ngFor="let product of products | filterProducts: searchQuery | sort: sortKey : sortOrder" class="col-lg-4">
+            <app-product [product]="product"></app-product>
         </div>
     </div>
 </div>
